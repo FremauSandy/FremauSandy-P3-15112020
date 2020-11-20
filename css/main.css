@@ -106,7 +106,7 @@ p {
 }
 
 .btn-search {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   width: 220px;
   height: 50px;
@@ -136,7 +136,26 @@ p {
   margin: 55px 0 30px 20px;
 }
 
-.function .circle {
+.function .btn-function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F6F6F6;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  width: 320px;
+  height: 75px;
+  margin: 10px 20px 10px 30px;
+}
+
+.function .btn-function .circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,40 +173,19 @@ p {
   color: white;
 }
 
-.function .btn-function {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  background-color: #F6F6F6;
-  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 20px;
-  width: 320px;
-  height: 75px;
-  margin: 10px 20px 10px 30px;
-  font-weight: 550;
-  font-size: 16px;
-}
-
 .function .btn-function .icon-function {
+  font-size: .75em;
   color: #7e7e7e;
-  width: 20px;
   font-size: 20px;
 }
 
-.function .btn-function .icon-function,
-.function .btn-function .circle {
+.function .btn-function .text-area {
+  font-size: 16px;
+}
+
+.function .btn-function .circle, .function .btn-function .icon-function, .function .btn-function .text-area {
   position: relative;
-  right: 40px;
+  right: 35px;
 }
 
 .choice {
@@ -222,7 +220,21 @@ p {
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.choice .img-restaurant {
+.choice .selection-restaurant .text-card-new {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  color: #36a78b;
+  background-color: #99e2d0;
+  width: 80px;
+  position: absolute;
+  left: 265px;
+  margin: 15px 20px 0 0;
+  padding: 5px;
+}
+
+.choice .selection-restaurant .img-restaurant {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -230,11 +242,11 @@ p {
   border-radius: 15px 15px 0 0;
 }
 
-.choice h3 {
+.choice .selection-restaurant h3 {
   margin: 0px 0 5px 0;
 }
 
-.choice .text-card {
+.choice .selection-restaurant .text-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,8 +257,14 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px;
+  margin: 15px;
   font-weight: 300;
+}
+
+.choice .selection-restaurant .check-heart {
+  position: relative;
+  left: 290px;
+  bottom: 50px;
 }
 
 footer {
