@@ -1,0 +1,340 @@
+/* --color infos purple #9356DC; pink #FF79DA; blue #99E2D0 lightgrey #F6F6F6; grey #EAEAEA; icongrey #7e7e7e; darkengrey #3A3433; -- */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@font-face {
+  font-family: "Roboto";
+  src: url("polices/Roboto-Regular.ttf") format("truetype");
+  src: url("polices/Roboto-Thin.ttf") format("truetype"), url("polices/Roboto-Bold.ttf") format("truetype"), url("polices/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("polices/Shrikhand-Regular.ttf") format("truetype");
+  src: url("polices/Shrikhand-Regular.otf") format("opentype");
+}
+/* --Mixins -- */
+/* --body -- */
+body,
+nav,
+header,
+section {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  margin: 0%;
+}
+
+/* --header-- */
+header {
+  background-color: white;
+  width: 100%;
+}
+header .title {
+  height: 75px;
+}
+header .title .fa-arrow-left {
+  color: black;
+  position: relative;
+  bottom: 8px;
+  right: 65px;
+}
+header .title .fa-arrow-left .fa-arrow-left:active {
+  color: black;
+}
+header .title .logo {
+  margin: 30px 0 0 0;
+  width: 165px;
+  height: 30px;
+}
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  box-shadow: inset 0.5px 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+header form .icon-map {
+  margin: 0 15px 0 0;
+}
+
+/* --nav-- */
+nav h1 {
+  margin: 35px 0 15px 0;
+  text-align: center;
+  font-size: 25px;
+}
+nav p {
+  width: 100%;
+  font-weight: 300;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    width: 60%;
+  }
+}
+.btn-search,
+.btn-order {
+  /* --pages menus -- */
+  border-style: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  width: 220px;
+  height: 50px;
+  background: linear-gradient(175deg, #ea73da, #9356dc);
+  color: white;
+  border-radius: 50px;
+  margin: 30px auto 60px auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+}
+
+h2 {
+  align-self: flex-start;
+  margin: 55px 0 30px 20px;
+}
+
+h3 {
+  margin: 0px 0 5px 0;
+  width: 100%;
+}
+
+h4 {
+  margin: 45px 0 0 20px;
+  font-weight: 300;
+  align-self: flex-start;
+}
+
+hr {
+  margin-left: 20px;
+  border-bottom: 3px solid #99E2D0;
+  border-left: none;
+  border-top: none;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* --Section function-- */
+.function {
+  height: 440px;
+  background-color: white;
+  width: 100%;
+}
+.function .title-function {
+  margin-left: 16%;
+}
+@media screen and (max-width: 1160px) {
+  .function .title-function {
+    margin-left: 20px;
+  }
+}
+.function .btn-function {
+  background-color: #F6F6F6;
+  border-style: none;
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F6F6F6;
+  font-weight: bold;
+  width: 50%;
+  height: 75px;
+  margin: 10px 20px 10px 30px;
+}
+.function .btn-function .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #9356DC;
+  color: white;
+}
+.function .btn-function .icon-function {
+  font-size: 0.75em;
+  color: #7e7e7e;
+  font-size: 20px;
+}
+.function .btn-function .text-area {
+  font-size: 16px;
+}
+.function .btn-function .circle, .function .btn-function .icon-function, .function .btn-function .text-area {
+  position: relative;
+  right: 35px;
+}
+@media screen and (max-width: 1160px) {
+  .function .btn-function {
+    width: 70%;
+  }
+}
+
+/* --Section Choice-- */
+.choice {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 60px 0;
+  width: 70%;
+}
+.choice .title-restaurant {
+  width: 100%;
+}
+.choice .selection-restaurant {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px 20px 30px;
+  width: 340px;
+  height: 255px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+.choice .selection-restaurant .text-new {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 3px;
+  color: #36a78b;
+  background-color: #99e2d0;
+  width: 80px;
+  padding: 5px;
+  position: relative;
+  bottom: 200px;
+  left: 80px;
+}
+.choice .selection-restaurant .first-new {
+  left: 65px;
+}
+.choice .selection-restaurant .img-restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 175px;
+  border-radius: 15px 15px 0 0;
+}
+.choice .selection-restaurant .text-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px;
+  font-weight: 300;
+}
+.choice .selection-restaurant .like {
+  position: relative;
+  right: 15px;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 1160px) {
+  .choice {
+    width: 100%;
+  }
+}
+/* --Footer-- */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  background-color: #3A3433;
+  color: white;
+}
+footer .title-footer {
+  height: 65px;
+}
+footer .title-footer .white-logo {
+  width: 100px;
+  height: 20px;
+  margin: 25px;
+}
+footer .text-footer {
+  margin-left: 25px;
+  line-height: 25px;
+}
+footer .text-footer .icon-footer {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* --page menu -- */
+figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+figure .picture-banner {
+  /* --a changer! n'est pas chevaucher par french-menu-- */
+  width: 375px;
+  height: 280px;
+}
+
+/* --Section menu-- */
+.menu {
+  width: 70%;
+}
+.menu .title-menu {
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .title-menu .french-title {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+.menu .title-menu .like-menu {
+  position: relative;
+  right: 30px;
+  top: 60px;
+}
+.menu .dishes {
+  background-color: #F6F6F6;
+  border-style: none;
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px;
+  padding: 15px 20px 15px 15px;
+}
+.menu .dishes h3 {
+  display: flex;
+  align-items: flex-start;
+}
+.menu .btn-order {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1160px) {
+  .menu {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

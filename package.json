@@ -1,0 +1,19 @@
+{
+  "name": "writting-sass",
+  "version": "1.0.0",
+  "description": "projet.3 via Openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FremauSandy/FremauSandy-P3-15112020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FremauSandy/FremauSandy-P3-15112020/issues"
+  },
+  "homepage": "https://github.com/FremauSandy/FremauSandy-P3-15112020#readme"
+}
