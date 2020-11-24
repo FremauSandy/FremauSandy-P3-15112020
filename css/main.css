@@ -2,13 +2,18 @@
 /* --color infos purple #9356DC; pink #FF79DA; blue #99E2D0 lightgrey #F6F6F6; grey #EAEAEA; icongrey #7e7e7e; darkengrey #3A3433; -- */
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("polices/Roboto-Regular.ttf");
-  src: url("polices/Roboto-Thin.ttf");
-  src: url("polices/Roboto-Bold.ttf");
-  src: url("polices/Roboto-Light.ttf");
-  src: url("polices/Shrikhand-Regular.otf");
+  src: url("polices/Roboto-Regular.ttf") format("truetype");
+  src: url("polices/Roboto-Thin.ttf") format("truetype");
+  src: url("polices/Roboto-Bold.ttf") format("truetype");
+  src: url("polices/Roboto-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Shrikhand-Regular",cursive;
+  src: url("polices/Shrikhand-Regular.ttf") format("truetype");
+  src: url("polices/Shrikhand-Regular.otf");
 }
 
 /* --première page menu à la french -- */
@@ -16,15 +21,10 @@ body,
 nav,
 header,
 section {
-  max-width: 1440px;
-  min-width: 300px;
   font-family: "Roboto" ,sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -46,9 +46,14 @@ header .title {
 }
 
 header .title .fa-arrow-left {
+  color: black;
   position: relative;
   bottom: 8px;
   right: 65px;
+}
+
+header .title .fa-arrow-left .fa-arrow-left:active {
+  color: black;
 }
 
 header .title .logo {
@@ -83,11 +88,11 @@ header form .icon-map {
 nav h1 {
   margin: 35px 0 15px 0;
   text-align: center;
-  width: 250px;
   font-size: 25px;
 }
 
 nav p {
+  width: 100%;
   font-weight: 300;
   font-size: large;
   display: -webkit-box;
@@ -100,18 +105,33 @@ nav p {
   margin: 0;
 }
 
-nav .btn-search,
-nav .btn-order {
+button {
+  border-style: none;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-search,
+.btn-order {
   /* --pages menus -- */
   font-size: 15px;
   letter-spacing: 0.5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 220px;
   height: 50px;
   background: linear-gradient(175deg, #ea73da, #9356dc);
   color: white;
   -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  border: none;
   border-radius: 50px;
   margin: 30px auto 60px auto;
 }
@@ -127,10 +147,36 @@ h3 {
   width: 100%;
 }
 
+h4 {
+  margin: 45px 0 0 20px;
+  font-weight: 300;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+hr {
+  margin-left: 20px;
+  border-bottom: 3px solid #99E2D0;
+  border-left: none;
+  border-top: none;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
 .function {
   height: 440px;
   background-color: white;
   width: 100%;
+}
+
+.function .title-function {
+  margin-left: 16%;
+}
+
+@media screen and (max-width: 1160px) {
+  .function .title-function {
+    margin-left: 20px;
+  }
 }
 
 .function .btn-function {
@@ -147,9 +193,16 @@ h3 {
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 20px;
-  width: 320px;
+  width: 50%;
   height: 75px;
   margin: 10px 20px 10px 30px;
+}
+
+@media screen and (max-width: 1160px) {
+  .function .btn-function .btn-function {
+    width: 235px;
+    /* --a changer! ne fonctionne pas -- */
+  }
 }
 
 .function .btn-function .circle {
@@ -186,9 +239,35 @@ h3 {
 }
 
 .choice {
-  margin: 0 0 50px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 60px 0;
+  width: 70%;
+}
+
+@media screen and (max-width: 1160px) {
+  .choice .choice {
+    width: 100%;
+    /* --a changer! ne fonctionne pas -- */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.choice .title-restaurant {
   width: 100%;
-  margin-bottom: 60px;
 }
 
 .choice .selection-restaurant {
@@ -199,7 +278,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0 10px 0;
+  margin: 20px 30px 20px 30px;
   width: 340px;
   height: 255px;
   background-color: white;
@@ -208,18 +287,22 @@ h3 {
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.choice .selection-restaurant .text-card-new {
+.choice .selection-restaurant .text-new {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
   border-radius: 3px;
   color: #36a78b;
   background-color: #99e2d0;
   width: 80px;
-  position: absolute;
-  left: 265px;
-  margin: 15px 20px 0 0;
   padding: 5px;
+  position: relative;
+  bottom: 200px;
+  left: 80px;
+}
+
+.choice .selection-restaurant .first-new {
+  left: 65px;
 }
 
 .choice .selection-restaurant .img-restaurant {
@@ -236,8 +319,17 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 15px;
   font-weight: 300;
+}
+
+.choice .selection-restaurant .like {
+  position: relative;
+  right: 15px;
+  bottom: 15px;
 }
 
 footer {
@@ -278,52 +370,66 @@ footer .text-footer .icon-footer {
 }
 
 /* --première page menu à la french -- */
-.picture-banner {
-  width: 100%;
-  height: 255px;
+figure {
+  margin: 0;
 }
 
-.french-menu {
-  background-color: pink;
+figure .picture-banner {
+  /* --a changer! n'est pas chevaucher par french-menu' -- */
+  width: 375px;
+  height: 280px;
+}
+
+.french-menu .title-menu {
   border-radius: 30px 30px 0 0;
-}
-
-.french-menu .french-title {
-  font-family: "Shrikand-Regular";
-}
-
-.french-menu .dishes {
-  width: 350px;
-  height: 70px;
-  margin: 0 0 15px 12px;
-  border-style: none;
-  border-radius: 15px;
-  background-color: white;
-  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.french-menu .btn-order {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.french-menu h4 {
-  margin: 0 0 10px 20px;
-  font-weight: 300;
+.french-menu .title-menu .french-title {
+  font-family: "Shrikhand-Regular";
+  /* --a changer! ne fonctionne pas -- */
+  font-style: italic;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-.french-menu hr {
-  border: none;
-  border-top: 3px solid #99e2d0;
-  width: 40px;
-  text-align: start;
+.french-menu .title-menu .like-menu {
+  position: relative;
+  right: 30px;
+  top: 60px;
+}
+
+.french-menu .dishes {
+  font-size: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px;
+  height: 70px;
+  margin: 10px;
+  padding: 15px 20px 15px 15px;
+  border-radius: 15px;
+}
+
+.french-menu .dishes > h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.french-menu .btn-order {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=main.css.map */
