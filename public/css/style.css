@@ -3,27 +3,30 @@
 @font-face {
   font-family: "Roboto";
   src: url("polices/Roboto-Regular.ttf") format("truetype");
-  src: url("polices/Roboto-Thin.ttf") format("truetype"), url("polices/Roboto-Bold.ttf") format("truetype"), url("polices/Roboto-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Shrikhand";
-  src: url("polices/Shrikhand-Regular.ttf") format("truetype");
-  src: url("polices/Shrikhand-Regular.otf") format("opentype");
-}
 /* --Mixins -- */
 /* --body -- */
+body {
+  max-width: 1440px;
+}
+
 body,
 nav,
 header,
 section {
-  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
+  font-family: "Roboto", sans-serif;
   flex-direction: column;
   background-color: #f6f6f6;
   margin: 0%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 /* --header-- */
@@ -50,8 +53,8 @@ header .title .logo {
 }
 header form {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 50px;
   background-color: #eaeaea;
@@ -107,7 +110,7 @@ h2 {
 }
 
 h3 {
-  margin: 0px 0 5px 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -186,10 +189,11 @@ hr {
 
 /* --Section Choice-- */
 .choice {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   margin: 0 0 60px 0;
   width: 70%;
 }
@@ -236,7 +240,10 @@ hr {
   margin: 15px;
   font-weight: 300;
 }
-.choice .selection-restaurant .like {
+.choice .selection-restaurant .text-card p {
+  margin-top: 5px;
+}
+.choice .selection-restaurant .text-card .like {
   position: relative;
   right: 15px;
   bottom: 15px;
@@ -250,7 +257,6 @@ hr {
 /* --Footer-- */
 footer {
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   width: 100%;
   height: 200px;
@@ -276,22 +282,28 @@ footer .text-footer .icon-footer {
 
 /* --page menu -- */
 figure {
-  margin: 0;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 figure .picture-banner {
-  /* --a changer! n'est pas chevaucher par french-menu-- */
-  width: 375px;
-  height: 280px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
 }
 
+@media screen and (max-width: 600px) {
+  figure > .picture-banner {
+    width: 100%;
+  }
+}
 /* --Section menu-- */
 .menu {
+  border-radius: 30px 30px 0 0;
   width: 70%;
+  position: relative;
+  bottom: 120px;
 }
 .menu .title-menu {
-  border-radius: 30px 30px 0 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -331,9 +343,12 @@ figure .picture-banner {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 600px) {
   .menu {
-    width: 80%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    bottom: 60px;
   }
 }
 
