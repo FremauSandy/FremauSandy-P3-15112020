@@ -8,10 +8,6 @@
 }
 /* --Mixins -- */
 /* --body -- */
-body {
-  max-width: 1440px;
-}
-
 body,
 nav,
 header,
@@ -181,7 +177,7 @@ hr {
   position: relative;
   right: 35px;
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 700px) {
   .function .btn-function {
     width: 70%;
   }
@@ -212,14 +208,15 @@ hr {
   border-radius: 20px;
 }
 .choice .selection-restaurant .text-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
   border-radius: 3px;
   color: #36a78b;
   background-color: #99e2d0;
   width: 80px;
-  padding: 5px;
   position: relative;
   bottom: 200px;
   left: 80px;
@@ -259,28 +256,40 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: #3A3433;
   color: white;
 }
-footer .title-footer {
-  height: 65px;
-}
 footer .title-footer .white-logo {
-  width: 100px;
   height: 20px;
   margin: 25px;
 }
 footer .text-footer {
   margin-left: 25px;
-  line-height: 25px;
+}
+footer .text-footer a {
+  color: white;
 }
 footer .text-footer .icon-footer {
   font-size: 12px;
   margin-right: 5px;
 }
+footer .text-footer .bloc-footer {
+  margin-left: 25px;
+}
 
-/* --page menu -- */
+@media screen and (max-width: 700px) {
+  footer {
+    height: 200px;
+  }
+  footer .text-footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    margin-left: 0;
+  }
+}
+/* --pages menus -- */
 figure {
   display: flex;
   justify-content: center;
