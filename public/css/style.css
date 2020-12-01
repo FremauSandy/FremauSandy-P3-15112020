@@ -1,12 +1,39 @@
-/* --color infos purple #9356DC; pink #FF79DA; blue #99E2D0 lightgrey #F6F6F6; grey #EAEAEA; icongrey #7e7e7e; darkengrey #3A3433; -- */
+/* --Variables -- */
+/* --Mixins -- */
+/* --Keyframes -- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("polices/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-/* --Mixins -- */
+@font-face {
+  font-family: "Shrikhand";
+  src: url("polices/Shrikhand-Regular.otf");
+  src: url("polices/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* --body -- */
 body,
 nav,
@@ -16,7 +43,7 @@ section {
   align-items: center;
   font-family: "Roboto", sans-serif;
   flex-direction: column;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   margin: 0%;
 }
 
@@ -53,7 +80,7 @@ header form {
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: #eaeaea;
+  background-color: #EAEAEA;
   box-shadow: inset 0.5px 2px 5px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.5px;
   font-weight: 500;
@@ -98,6 +125,13 @@ nav p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 20px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
+}
+.btn-search:hover,
+.btn-order:hover {
+  transform: scale(1.3);
 }
 
 h2 {
@@ -146,6 +180,7 @@ hr {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 20px;
+  cursor: pointer;
   justify-content: space-around;
   align-items: center;
   background-color: #F6F6F6;
@@ -153,6 +188,12 @@ hr {
   width: 50%;
   height: 75px;
   margin: 10px 20px 10px 30px;
+}
+.function .btn-function:hover {
+  background-color: #f4edff;
+}
+.function .btn-function:hover .icon-function {
+  color: #9356DC;
 }
 .function .btn-function .circle {
   display: flex;
@@ -166,9 +207,11 @@ hr {
   color: white;
 }
 .function .btn-function .icon-function {
-  font-size: 0.75em;
   color: #7e7e7e;
   font-size: 20px;
+}
+.function .btn-function .fa-mobile-alt {
+  margin-left: 15px;
 }
 .function .btn-function .text-area {
   font-size: 16px;
@@ -206,6 +249,8 @@ hr {
   background-color: white;
   border: none;
   border-radius: 20px;
+  transform: scale(1);
+  transition: transform 500ms;
 }
 .choice .selection-restaurant .text-new {
   display: flex;
@@ -215,7 +260,7 @@ hr {
   font-weight: 500;
   border-radius: 3px;
   color: #36a78b;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   width: 80px;
   position: relative;
   bottom: 200px;
@@ -230,20 +275,16 @@ hr {
   height: 175px;
   border-radius: 15px 15px 0 0;
 }
-.choice .selection-restaurant .text-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 15px;
-  font-weight: 300;
+.choice .selection-restaurant .text-dish {
+  width: 90%;
+  padding: 10px 0 20px 15px;
+  margin: 0;
 }
-.choice .selection-restaurant .text-card p {
-  margin-top: 5px;
-}
-.choice .selection-restaurant .text-card .like {
+.choice .selection-restaurant .text-dish .logo-heart {
   position: relative;
-  right: 15px;
-  bottom: 15px;
+}
+.choice .selection-restaurant:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (max-width: 1160px) {
@@ -310,24 +351,49 @@ figure .picture-banner {
   border-radius: 30px 30px 0 0;
   width: 70%;
   position: relative;
-  bottom: 120px;
+  bottom: 160px;
 }
 .menu .title-menu {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.menu .title-menu .french-title {
+.menu .title-menu .big-title {
   font-family: "Shrikhand";
   font-size: 28px;
   font-weight: lighter;
   letter-spacing: 0.5px;
   margin-bottom: 0;
 }
-.menu .title-menu .like-menu {
+.menu .title-menu .logo-heart {
   position: relative;
-  right: 30px;
-  top: 60px;
+  right: 60px;
+  top: 25px;
+}
+.menu .logo-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .logo-heart:hover i.far {
+  color: transparent;
+}
+.menu .logo-heart:hover .second {
+  color: #9356DC;
+}
+.menu i.far {
+  transform: margin-bottom 1s;
+  transition-duration: 0.5s;
+}
+.menu .second {
+  position: absolute;
+  color: transparent;
+  transform: margin-bottom 1s;
+  transition-duration: 0.5s;
+}
+.menu .menu,
+.menu .dishes {
+  animation: 2s ease-out load;
 }
 .menu .dishes {
   background-color: #F6F6F6;
@@ -337,21 +403,61 @@ figure .picture-banner {
   border: none;
   border-radius: 20px;
   background-color: white;
-  font-size: 15px;
-  flex-wrap: wrap;
-  justify-content: space-between;
   width: 90%;
-  margin: 10px;
-  padding: 15px 20px 15px 15px;
+  height: 70px;
+  margin: 10px 0 10px 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
 }
-.menu .dishes h3 {
+.menu .dishes:hover .check {
+  width: 25%;
+}
+.menu .dishes .text-dish {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0 20px 20px;
+}
+.menu .dishes .text-dish h3 {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 5px;
+}
+.menu .dishes .price {
+  height: 90%;
+  margin: 20px;
+  padding-top: 65px;
+}
+.menu .dishes .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  width: 0;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+  transform: margin-right 1s;
+  transition-duration: 500ms;
 }
 .menu .btn-order {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 700px) {
+  .menu {
+    position: relative;
+    bottom: 90px;
+  }
+}
 @media screen and (max-width: 600px) {
   .menu {
     width: 100%;
