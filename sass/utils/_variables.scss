@@ -1,0 +1,39 @@
+/* --Variables -- */
+$pink: #FF79DA;
+$blue: #99E2D0;
+$purple: #9356DC;
+$lightpurple:#f4edff;
+$lightgrey: #F6F6F6;
+$grey: #EAEAEA;
+$icongrey: #7e7e7e;
+$darkengrey: #3A3433;
+
+/* --Mixins -- */
+
+@mixin card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px 20px 30px;
+    width: 340px;
+    height: 255px;
+    background-color: white;
+}
+
+/* --Keyframes -- */
+
+@keyframes load{
+    0%
+    {opacity:0;
+     transform: translateY(100%)}
+    100%
+    {opacity:1;
+     transform: translateY(0)}
+  }
+  @keyframes spin {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+  }

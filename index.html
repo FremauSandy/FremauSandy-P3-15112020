@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/ce02317acd.js"></script>
+  <link rel="stylesheet" href="css/font-awesome-animation.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -20,7 +21,7 @@
     <div class="title">
       <img class="logo" src="images/logo/ohmyfood.png" alt="logo">
     </div>
-    <form action="">
+    <form action="recherche">
       <i class="fas fa-map-marker-alt icon-map"></i>
       Paris,Belleville
     </form>
@@ -34,21 +35,21 @@
   <section class="function"> 
     <h2 class="title-function">Fonctionnement</h2>
     <button class="btn-function">
-      <div class="circle">1</div>
+      <span class="circle">1</span>
       <i class="fas fa-mobile-alt icon-function"></i>
-      <div class="text-area">Choisissez un restaurant</div>
+      <span class="text-area">Choisissez un restaurant</span>
     </button>
 
     <button class="btn-function">
-      <div class="circle">2</div>
+      <span class="circle">2</span>
       <i class="fas fa-list-ul icon-function"></i>
-      <div class="text-area">Composez votre menu</div>
+      <span class="text-area">Composez votre menu</span>
     </button>
 
     <button class="btn-function">
-      <div class="circle">3</div>
+      <span class="circle">3</span>
       <i class="fas fa-store icon-function"></i>
-      <div class="text-area">Dégustez au restaurant</div>
+      <span class="text-area">Dégustez au restaurant</span>
     </button>
   </section>
   
@@ -59,7 +60,10 @@
       <div class="text-card">
         <h3>La palette du goût</h3><p>Ménilmontant</p> 
         <span class="text-new first-new">Nouveau</span>
-        <i class="far fa-heart fa-lg like"></i>
+        <div class="logo-heart">
+          <i class="far fa-heart fa-lg"></i>
+          <i class="fas fa-heart fa-lg second"></i>
+        </div>
       </div></a>
     </article>
 
@@ -68,23 +72,33 @@
       <div class="text-card">
         <h3>La note enchantée</h3><p>Charonne</p>
         <span class="text-new">Nouveau</span>
-        <i class="far fa-heart fa-lg like"></i>
+        <div class="logo-heart">
+          <i class="far fa-heart fa-lg"></i>
+          <i class="fas fa-heart fa-lg second"></i>
+        </div>
       </div></a>
     </article>
 
     <article class=selection-restaurant><a href="french.html">
       <img class="img-restaurant" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant"> 
-      <div class="text-card">
+      <div class="text-dish">
         <h3>A la française</h3><p>Cité Rouge</p>
-        <i class="far fa-heart fa-lg like"></i>
-      </div></a>
+      </div>
+        <div class="logo-heart">
+          <i class="far fa-heart fa-lg"></i>
+          <i class="fas fa-heart fa-lg second"></i>
+        </div>
+      </a>
     </article>
 
     <article class=selection-restaurant><a href="delight-senses.html">
       <img class="img-restaurant" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant"> 
       <div class="text-card">
         <h3>Le délice des sens</h3><p>Folie-Méricourt</p> 
-        <i class="far fa-heart fa-lg like"></i>
+        <div class="logo-heart">
+          <i class="far fa-heart fa-lg"></i>
+          <i class="fas fa-heart fa-lg second"></i>
+        </div>
       </div></a>
     </article>
   </section>

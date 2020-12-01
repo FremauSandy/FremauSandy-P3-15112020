@@ -1,0 +1,11 @@
+@mixin structure{
+    display: flex;
+    align-items: center;
+}
+@mixin shadow-btn{
+    box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
+}
+@mixin border{
+    border: none;
+    border-radius: 20px;
+}

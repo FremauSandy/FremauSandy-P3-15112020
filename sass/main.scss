@@ -1,49 +1,7 @@
-/* --color infos purple #9356DC; pink #FF79DA; blue #99E2D0 lightgrey #F6F6F6; grey #EAEAEA; icongrey #7e7e7e; darkengrey #3A3433; -- */
-
-@font-face{
-  font-family: "Roboto";
-  src: url("polices/Roboto-Regular.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-/* --Mixins -- */
-@mixin structure{
-  display: flex;
-  align-items: center;
-}
-@mixin shadow-btn{
-  box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
-}
-@mixin border{
-  border: none;
-  border-radius: 20px;
-}
-@mixin grey-btn{
-  background-color: #F6F6F6;
-  border-style: none;
-  display: flex;
-}
-@mixin btn-purple{
-  border-style: none;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  width: 220px;
-  height: 50px;
-  background: linear-gradient(175deg, #ea73da, #9356dc);
-  color: white;
-  border-radius: 50px;
-  margin: 30px auto 60px auto;
-}
-@mixin card{
-  display: flex;
-  flex-direction: column;
-  margin: 20px 30px 20px 30px;
-  width: 340px;
-  height: 255px;
-  background-color: white;
-}
+@import "./utils/variables";
+@import "./base/base.scss";
+@import "./base/typography.scss";
+@import "./components/buttons.scss";
 
 /* --body -- */
 body,
@@ -53,7 +11,7 @@ section{
   @include structure;
   font-family: "Roboto" ,sans-serif;
   flex-direction: column;
-  background-color: #f6f6f6;
+  background-color:$lightgrey;
   margin: 0%;
 }
 a{
@@ -86,7 +44,7 @@ header{
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: #eaeaea;
+    background-color:$grey;
     box-shadow: inset 0.5px 2px 5px rgba(0,0,0,0.2);
     letter-spacing: 0.5px;
     font-weight: 500;
@@ -122,6 +80,12 @@ nav{
   @include btn-purple;
   @include shadow-btn;
   @include border;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
+    &:hover{
+    transform: scale(1.3);
+  }
 }
 h2{
   align-self: flex-start;
@@ -138,7 +102,7 @@ h4{
 }
 hr{
   margin-left: 20px;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid $blue;
   border-left: none;
   border-top: none;
   width: 40px;
@@ -161,13 +125,20 @@ hr{
     @include grey-btn;
     @include shadow-btn;
     @include border;
+    cursor: pointer;
     justify-content: space-around;
     align-items: center;
-    background-color:#F6F6F6;
+    background-color:$lightgrey;
     font-weight: bold;
     width: 50%;
     height: 75px;
     margin: 10px 20px 10px 30px;
+    &:hover{
+      background-color: $lightpurple;
+      .icon-function{
+        color: $purple;
+      }
+    }
     .circle{
       @include structure;
       justify-content: center;
@@ -175,13 +146,15 @@ hr{
       width: 25px;
       height: 25px;
       border-radius: 100%;
-      background-color: #9356DC;
+      background-color:$purple;
       color: white;
       }
       .icon-function{
-        font-size: .75em;
-        color: #7e7e7e;
+        color:$icongrey;
         font-size: 20px;
+      }
+      .fa-mobile-alt{
+        margin-left: 15px;
       }
       .text-area{
         font-size: 16px;
@@ -212,6 +185,8 @@ hr{
     @include shadow-btn;
     @include card;
     @include border;
+    transform: scale(1);
+    transition: transform 500ms;
     .text-new{
       @include structure;
       justify-content: center;
@@ -219,7 +194,7 @@ hr{
       font-weight: 500;
       border-radius: 3px;
       color: #36a78b;
-      background-color: #99e2d0;
+      background-color:$blue;
       width: 80px;
       position: relative;
       bottom: 200px;
@@ -234,20 +209,17 @@ hr{
       height: 175px;
       border-radius: 15px 15px 0 0;
     }
-    .text-card{
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 15px;
-      font-weight: 300;
-      p{
-        margin-top: 5px;
-      }
-      .like{
+    .text-dish{
+      width: 90%;
+      padding: 10px 0 20px 15px;
+      margin: 0;
+      .logo-heart{
         position: relative;
-        right: 15px;
-        bottom: 15px;
+        
       }
+    }
+    &:hover{
+      transform: scale(1.15);
     }
   }  
 }
@@ -256,13 +228,14 @@ hr{
     width: 100%;
   }
 }
+
 /* --Footer-- */
 footer{
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 150px;
-  background-color:  #3A3433;
+  background-color:$darkengrey;
   color: white;
   .title-footer{
     .white-logo{
@@ -284,6 +257,7 @@ footer{
     }
   }
 }
+
 @media screen and (max-width:700px){
   footer{
     height: 200px;
@@ -316,42 +290,112 @@ figure{
   border-radius: 30px 30px 0 0;
   width: 70%;
   position: relative;
-  bottom: 120px;
+  bottom: 160px;
   .title-menu{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    .french-title{
+    .big-title{
       font-family: "Shrikhand";
       font-size: 28px;
       font-weight: lighter;
       letter-spacing: 0.5px;
       margin-bottom: 0;
     }
-    .like-menu{
+    .logo-heart{
       position: relative;
-      right: 30px;
-      top: 60px;
+      right: 60px;
+      top: 25px;
     }
+  }
+  .logo-heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      i.far{
+        color:transparent;
+      }
+      .second{
+        color: $purple;
+      }
+    }
+  }
+  i.far{
+    transform: margin-bottom 1s;
+    transition-duration: 0.5s;
+  }
+  .second{
+    position: absolute;
+    color: transparent;
+    transform: margin-bottom 1s;
+    transition-duration: 0.5s;
+  }
+  .menu,
+  .dishes{
+    animation: 2s ease-out load;
   }
   .dishes{
     @include grey-btn;
     @include shadow-btn;
     @include border;
     background-color: white;
-    font-size: 15px;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 90%;
-    margin: 10px;
-    padding: 15px 20px 15px 15px;
-    h3{
-      display: flex;
-      align-items: flex-start;
+    height: 70px;
+    margin: 10px 0 10px 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover{
+      .check{
+        width: 25%;
       }
+  
+    }
+    .text-dish{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      margin: 20px 0 20px 20px;
+      h3{
+        display: flex;
+        align-items: flex-start; 
+        margin-bottom: 5px;
+      }
+    }
+    .price{
+      height: 90%;
+      margin: 20px;
+      padding-top: 65px;
+    }
+    .check{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      color: white;
+      background-color: $blue;
+      width: 0;
+      height: 100%;
+      color: white;
+      overflow: hidden;
+      border-radius: 0 20px 20px 0;
+      transform: margin-right 1s;
+      transition-duration: 500ms;
+    }
   }
   .btn-order{
     margin-top: 50px;
+  }
+}
+@media screen and (max-width:700px){
+  .menu{
+    position: relative;
+    bottom: 90px;
   }
 }
 @media screen and (max-width:600px){
