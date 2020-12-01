@@ -1,6 +1,7 @@
 @mixin structure{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 @mixin shadow-btn{
     box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
