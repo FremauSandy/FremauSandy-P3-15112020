@@ -332,8 +332,16 @@ figure .picture-banner {
   top: 15px;
 }
 .menu .menu,
+.menu span,
 .menu .dishes {
-  animation: 2s ease-out load;
+  animation: 3s ease-out load;
+}
+.menu span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition-delay: 3s;
 }
 .menu h2 {
   margin: 45px 0 0 40px;
