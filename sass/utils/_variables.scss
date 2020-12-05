@@ -8,17 +8,6 @@ $grey: #EAEAEA;
 $icongrey: #7e7e7e;
 $darkengrey: #3A3433;
 
-/* --Mixins -- */
-
-@mixin card{
-    display: flex;
-    flex-direction: column;
-    margin: 20px 30px 20px 30px;
-    width: 340px;
-    height: 255px;
-    background-color: white;
-}
-
 /* --Keyframes -- */
 
 @keyframes load{
@@ -37,3 +26,4 @@ $darkengrey: #3A3433;
           transform: rotate(360deg);
       }
   }
+  

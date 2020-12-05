@@ -1,0 +1,135 @@
+/* --Section menu-- */
+figure{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  .picture-banner{
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+  }
+}
+.menu{
+    border-radius: 30px 30px 0 0;
+    width: 70%;
+    position: relative;
+    bottom: 140px;
+    .title-menu{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .big-title{
+        font-size: 30px;
+        font-family: "Shrikhand";
+        font-weight: lighter;
+        letter-spacing: 0.5px;
+        margin: 35px 0 0 20px;
+      }
+      .logo-heart{
+        position: relative;
+        right: 40px;
+        top: 15px;
+      }
+    }
+    .menu,
+    .dishes{
+      animation: 2s ease-out load;
+    }
+    h2{
+      margin: 45px 0 0 40px;
+      font-weight: 300;
+    }
+    label{
+      @include grey-btn;
+      @include shadow-btn;
+      @include border;
+      background-color: white;
+      width: 90%;
+      height: 70px;
+      margin: 10px 0 10px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover{
+          .check{
+              width: 25%;
+              .fa-check-circle{
+                transform: rotate(360deg)
+              }
+            }
+        }
+        &:active{
+            .check{
+                background-color: $purple;
+                width: 15%;
+                .fa-check-circle{
+                    transform: scale(1.5);
+                }
+            }
+        }
+      }
+      .text-dish{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        margin-left: 15px;
+        h3{
+          margin-top: 20px;
+        }
+        p{
+          margin-top: 5px;
+        }
+      }
+      .price{
+        height: 90%;
+        margin: 20px;
+        padding-top: 65px;
+        font-weight: bolder;
+      }
+      .check{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        color: white;
+        background-color: $blue;
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0 20px 20px 0;
+        transition-duration: 500ms;
+        .fa-check-circle{
+            transition-duration: 400ms;
+        }
+      }
+    }
+    .btn-order{
+      margin-top: 50px;
+    }  
+  @media screen and (max-width:700px){
+    .menu{
+      position: relative;
+      bottom: 90px;
+    }
+  }
+  @media screen and (max-width:600px){
+    figure>.picture-banner{
+        width: 100%;
+    }
+    .menu{
+      width: 100%;
+      margin: 0;
+      position: relative;
+      bottom: 60px;
+      h3,
+      .text-dish{
+        -o-text-overflow: ellipsis;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+      }
+    }
+  }

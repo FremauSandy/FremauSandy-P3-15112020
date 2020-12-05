@@ -1,0 +1,28 @@
+.logo-heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i.far{
+        transition-duration: 500ms;
+    }
+    .second{
+        position: absolute;
+        color: transparent;
+        transition: 1s ease-in-out;
+    }
+    &:hover{
+      i.far{
+        color:transparent;
+      }
+      .second{
+       color: $purple; 
+      }
+    }
+  }
+  @media screen and (max-width:400px){
+    i.far,
+    .second{
+      position: absolute;
+      bottom: 70px;
+    }
+  }

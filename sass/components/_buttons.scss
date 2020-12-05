@@ -14,3 +14,15 @@
     border-radius: 50px;
     margin: 30px auto 60px auto;
 }
+.btn-search, /* --page acceuil -- */
+.btn-order{ /* --pages menus -- */
+  @include btn-purple;
+  @include shadow-btn;
+  @include border;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
+    &:hover{
+    transform: scale(1.3);
+  }
+}

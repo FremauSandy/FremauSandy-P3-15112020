@@ -10,3 +10,19 @@
     border: none;
     border-radius: 20px;
 }
+@mixin blue-line{
+    margin-left: 20px;
+    border-bottom: 3px solid $blue;
+    border-left: none;
+    border-top: none;
+    width: 40px;
+    margin-bottom: 10px;
+}
+@mixin card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px 20px 30px;
+    width: 340px;
+    height: 255px;
+    background-color: white;
+}

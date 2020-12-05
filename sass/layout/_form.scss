@@ -1,0 +1,62 @@
+/* --Section function-- */
+.function{
+    height: 440px;
+    background-color: white;
+    width: 100%;
+    .title-function{
+      margin-left: 16%;
+    }
+    @media screen and (max-width: 1160px){
+      .title-function{
+        margin-left: 20px;
+      }
+    }
+    .btn-function{
+      @include grey-btn;
+      @include shadow-btn;
+      @include border;
+      cursor: pointer;
+      justify-content: space-around;
+      align-items: center;
+      background-color:$lightgrey;
+      font-weight: bold;
+      width: 50%;
+      height: 75px;
+      margin: 10px 20px 10px 30px;
+      &:hover{
+        background-color: $lightpurple;
+        .icon-function{
+          color: $purple;
+        }
+      }
+      .circle{
+        @include structure;
+        justify-content: center;
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color:$purple;
+        color: white;
+        }
+        .icon-function{
+          color:$icongrey;
+          font-size: 20px;
+        }
+        .fa-mobile-alt{
+          margin-left: 15px;
+        }
+        .text-area{
+          font-size: 16px;
+        }
+        .circle,.icon-function,.text-area{
+          position: relative;
+          right: 35px;
+        }
+    }
+    @media screen and (max-width: 700px){
+      .btn-function{
+        width: 70%;
+      }
+    }
+  }
