@@ -9,6 +9,11 @@
     .title-restaurant{
       width: 100%;
     }
+    @media screen and (max-width:400px){
+      .title-restaurant{
+        width: 80%;
+      }
+    }
     article{
       @include shadow-btn;
       @include card;
@@ -16,15 +21,21 @@
       transform: scale(1);
       transition: transform 500ms;
       .text-new{
-        @include structure;
         border-radius: 3px;
         color: #36a78b;
         background-color:$blue;
+        margin: 0;
         padding: 8px;
         position: absolute;
         top: 20px;
-        left: 235px;
+        left: 70%;
       }
+    @media screen and (max-width:400px){
+      .text-new{
+        @include structure;
+        width: 70px;
+      }
+    }
       .img-restaurant{
         object-fit:cover;
         width: 100%;
@@ -33,8 +44,8 @@
       }
       .logo-heart{
         position: absolute;
-        bottom: 35px;
-        left: 280px;
+        bottom: 25px;
+        left: 80%;
       }
       .text-card{
           margin: 10px;
