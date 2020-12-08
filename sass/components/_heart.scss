@@ -1,28 +1,23 @@
 .logo-heart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include structure;
     i.far{
-        transition-duration: 500ms;
+      transform: margin-bottom 1s;
+      transition-duration: 0.5s;
     }
     .second{
-        position: absolute;
-        color: transparent;
-        transition: 1s ease-in-out;
+      position: absolute;
+      color: transparent;
+      transition-duration: 2s;
     }
     &:hover{
       i.far{
         color:transparent;
       }
       .second{
-       color: $purple; 
+        background: -o-linear-gradient(bottom,$pink, $purple);
+        background: linear-gradient(to top, $pink, $purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
-  }
-  @media screen and (max-width:400px){
-    i.far,
-    .second{
-      position: absolute;
-      bottom: 70px;
-    }
-  }
+}

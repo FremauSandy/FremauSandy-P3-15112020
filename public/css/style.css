@@ -20,6 +20,22 @@
     transform: rotate(360deg);
   }
 }
+@keyframes spinner-background {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("polices/Roboto-Regular.ttf") format("truetype");
@@ -98,31 +114,52 @@ hr {
 
 .logo-heart {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .logo-heart i.far {
-  transition-duration: 500ms;
+  transform: margin-bottom 1s;
+  transition-duration: 0.5s;
 }
 .logo-heart .second {
   position: absolute;
   color: transparent;
-  transition: 1s ease-in-out;
+  transition-duration: 2s;
 }
 .logo-heart:hover i.far {
   color: transparent;
 }
 .logo-heart:hover .second {
-  color: #9356DC;
+  background: -o-linear-gradient(bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 400px) {
-  i.far,
-.second {
-    position: absolute;
-    bottom: 70px;
-  }
+/* --loader-- */
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: white;
+  animation: spinner-background 3s;
 }
+
+.favloader {
+  width: 50%;
+  height: 50%;
+  animation: spin 2s linear infinite;
+}
+
 /* --header-- */
 header {
   background-color: white;
@@ -274,7 +311,7 @@ header form .icon-map {
 }
 .choice article .logo-heart {
   position: absolute;
-  bottom: 40px;
+  bottom: 35px;
   left: 280px;
 }
 .choice article .text-card {
@@ -374,7 +411,6 @@ figure .picture-banner {
 }
 .menu label:active .check {
   background-color: #9356DC;
-  width: 15%;
 }
 .menu label:active .check .fa-check-circle {
   transform: scale(1.5);
@@ -390,6 +426,9 @@ figure .picture-banner {
   margin-top: 20px;
 }
 .menu .text-dish p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 5px;
 }
 .menu .price {
@@ -432,8 +471,18 @@ figure .picture-banner {
   .menu {
     width: 100%;
     margin: 0;
-    position: relative;
-    bottom: 60px;
+  }
+  .menu .big-title {
+    text-align: start;
+    margin: 20px;
+    width: 100%;
+  }
+  .menu h2 {
+    width: 90%;
+    margin: 40px 0 10px 10px;
+  }
+  .menu label:hover .check {
+    width: 60%;
   }
   .menu h3,
 .menu .text-dish {
@@ -493,6 +542,11 @@ section {
   flex-direction: column;
   background-color: #F6F6F6;
   margin: 0%;
+}
+
+body {
+  animation: fadeIn 6s ease;
+  animation-fill-mode: forwards;
 }
 
 a {

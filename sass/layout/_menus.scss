@@ -72,7 +72,6 @@ figure{
         &:active{
             .check{
                 background-color: $purple;
-                width: 15%;
                 .fa-check-circle{
                     transform: scale(1.5);
                 }
@@ -89,6 +88,9 @@ figure{
           margin-top: 20px;
         }
         p{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           margin-top: 5px;
         }
       }
@@ -130,8 +132,22 @@ figure{
     .menu{
       width: 100%;
       margin: 0;
-      position: relative;
-      bottom: 60px;
+      .big-title{
+        text-align: start;
+        margin: 20px;
+        width: 100%;
+      }
+      h2{
+        width: 90%;
+        margin: 40px 0 10px 10px;
+      }
+      label{
+        &:hover{
+            .check{
+            width: 60%;
+            }
+        }
+      }
       h3,
       .text-dish{
         -o-text-overflow: ellipsis;
@@ -140,4 +156,5 @@ figure{
         white-space:nowrap;
       }
     }
+  
   }

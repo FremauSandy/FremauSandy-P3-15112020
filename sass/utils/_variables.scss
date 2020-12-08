@@ -9,7 +9,6 @@ $icongrey: #7e7e7e;
 $darkengrey: #3A3433;
 
 /* --Keyframes -- */
-
 @keyframes load{
     0%
     {opacity:0;
@@ -17,13 +16,28 @@ $darkengrey: #3A3433;
     100%
     {opacity:1;
      transform: translateY(0)}
+}
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
   }
-  @keyframes spin {
-      from {
-          transform: rotate(0deg);
-      }
-      to {
-          transform: rotate(360deg);
-      }
+  @keyframes spinner-background {
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  
+  @keyframes fadeIn{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

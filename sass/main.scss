@@ -1,14 +1,19 @@
 @import "./utils/variables";
+
 @import "./base/base.scss";
 @import "./base/typography.scss";
+
 @import "./components/titles.scss";
 @import "./components/buttons.scss";
 @import "./components/heart.scss";
+@import "./components/loader.scss";
+
 @import "./layout/header.scss";
 @import "./layout/form.scss";
 @import "./layout/choice.scss";
 @import "./layout/menus.scss";
 @import "./layout/footer.scss";
+
 
 /* --body -- */
 body,
@@ -21,11 +26,14 @@ section{
   background-color:$lightgrey;
   margin: 0%;
 }
+body{ 
+  animation:fadeIn 6s ease;
+  animation-fill-mode: forwards;
+} 
 a{
   color: black;
   text-decoration: none;
 }
-
 /* --nav-- */
 nav{
   p{

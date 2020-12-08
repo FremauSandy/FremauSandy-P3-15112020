@@ -1,0 +1,22 @@
+/* --loader-- */
+.loader{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: white;
+    animation: spinner-background 3s;
+  }
+  .favloader{
+    width: 50%;
+    height: 50%;
+    animation: spin 2s linear infinite; 
+  }
