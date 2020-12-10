@@ -25,18 +25,16 @@ section{
   background-color:$lightgrey;
   margin: 0%;
 }
-.back{
-  opacity:1;
-  background-color: $purple;
-  animation-delay: 5s;
-  animation: disappear 2s ease-out;
-  animation-fill-mode: forwards;
-}
-body{ /* --exclure loader de l'animation css -- */
-  animation-delay: 5s;
+.container{
   animation: appear 4s ease-in;
   animation-fill-mode: forwards;
 } 
+.back{
+  opacity:1;
+  animation: disappear 4s ease-out;
+  animation-fill-mode: forwards;
+}
+
 p{
   @include ellipsis;
 }
