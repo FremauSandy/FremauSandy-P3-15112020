@@ -1,6 +1,5 @@
 @import "./utils/variables";
 
-@import "./base/base.scss";
 @import "./base/typography.scss";
 
 @import "./components/titles.scss";
@@ -26,10 +25,21 @@ section{
   background-color:$lightgrey;
   margin: 0%;
 }
-body{ 
-  animation:fadeIn 6s ease;
+.back{
+  opacity:1;
+  background-color: $purple;
+  animation-delay: 5s;
+  animation: disappear 2s ease-out;
+  animation-fill-mode: forwards;
+}
+body{ /* --exclure loader de l'animation css -- */
+  animation-delay: 5s;
+  animation: appear 4s ease-in;
   animation-fill-mode: forwards;
 } 
+p{
+  @include ellipsis;
+}
 a{
   color: black;
   text-decoration: none;

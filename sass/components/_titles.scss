@@ -9,9 +9,8 @@ h1{
     }
 }
 h2{
+    width: 90%;
     font-size: 18px;
-    margin: 0;
-    width: 100%;
 }
 .title-function,
 .title-restaurant{
@@ -19,9 +18,7 @@ h2{
     align-self: flex-start;
     margin: 55px 0 30px 20px;
 }
-h3{
-    display: flex;
-    align-items: flex-start; 
+h3{ @include ellipsis;
     margin: 0;
 }
 hr{

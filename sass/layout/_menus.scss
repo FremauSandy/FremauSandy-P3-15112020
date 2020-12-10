@@ -14,9 +14,9 @@ figure{
     position: relative;
     bottom: 140px;
     .title-menu{
-      width: 100%;
+      width: 95%;
+      margin-right: 40px;
       display: flex;
-      justify-content: space-between;
       .big-title{
         font-size: 30px;
         font-family: "Shrikhand";
@@ -25,26 +25,33 @@ figure{
         margin: 35px 0 0 20px;
       }
       .logo-heart{
-        position: relative;
-        right: 40px;
-        top: 15px;
+        margin-top: 30px;
       }
     }
-    .menu,
-    span,
-    .dishes{
-      animation: 3s ease-out load;
+    @media screen and (max-width:400px){
+      .title-menu{
+        margin-right: 0;
+        margin-left: 5px;
+        width: 100%;
+      }
+      .logo-heart{
+        position: absolute;
+        right: 30px;
+        top: 80px;
+      }
     }
     span{
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      transition-delay: 3s;
+      animation: 2s ease-out load;
     }
     h2{
-      margin: 45px 0 0 40px;
+      width: 96%;
+      margin: 45px 0 0 0 ;
       font-weight: 300;
+      animation: 1s ease-out load;
     }
     label{
       @include grey-btn;
@@ -61,37 +68,33 @@ figure{
       align-items: center;
       overflow: hidden;
       cursor: pointer;
+      animation: 2.5s ease-out load;
       &:hover{
           .check{
               width: 25%;
               .fa-check-circle{
-                transform: rotate(360deg)
+                animation: rotate 500ms;
+                animation-fill-mode: forwards;
               }
-            }
-        }
-        &:active{
-            .check{
-                background-color: $purple;
-                .fa-check-circle{
-                    transform: scale(1.5);
-                }
             }
         }
       }
       .text-dish{
         width: 100%;
+        @include ellipsis;
         display: flex;
         flex-direction: column;
         align-items: flex-start; 
         margin-left: 15px;
         h3{
+          @include ellipsis;
           margin-top: 20px;
+          width: 100%;
+          
         }
         p{
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
           margin-top: 5px;
+          width: 100%;
         }
       }
       .price{
@@ -118,13 +121,8 @@ figure{
     }
     .btn-order{
       margin-top: 50px;
+      animation: 3s ease-out load;
     }  
-  @media screen and (max-width:700px){
-    .menu{
-      position: relative;
-      bottom: 90px;
-    }
-  }
   @media screen and (max-width:600px){
     figure>.picture-banner{
         width: 100%;
@@ -132,11 +130,6 @@ figure{
     .menu{
       width: 100%;
       margin: 0;
-      .big-title{
-        text-align: start;
-        margin: 20px;
-        width: 100%;
-      }
       h2{
         width: 90%;
         margin: 40px 0 10px 10px;
@@ -148,13 +141,5 @@ figure{
             }
         }
       }
-      h3,
-      .text-dish{
-        -o-text-overflow: ellipsis;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space:nowrap;
-      }
     }
-  
   }

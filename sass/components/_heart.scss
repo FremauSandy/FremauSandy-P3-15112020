@@ -1,21 +1,18 @@
 .logo-heart{
     @include structure;
-    i.far{
-      transform: margin-bottom 1s;
-      transition-duration: 0.5s;
-    }
     .second{
       position: absolute;
-      color: transparent;
-      transition-duration: 2s;
+      opacity: 0;
     }
     &:hover{
       i.far{
-        color:transparent;
+        animation: disappear 1.5s;
+        animation-fill-mode: forwards;
       }
       .second{
-        background: -o-linear-gradient(bottom,$pink, $purple);
-        background: linear-gradient(to top, $pink, $purple);
+        animation: appear 2.5s;
+        animation-fill-mode: forwards;
+        background: linear-gradient(175deg, #ea73da, #9356dc);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
