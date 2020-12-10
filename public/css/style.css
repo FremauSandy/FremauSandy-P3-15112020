@@ -147,8 +147,8 @@ hr {
 }
 .back .spin {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 100%;
   width: 280px;
   height: 280px;
@@ -157,10 +157,20 @@ hr {
   border-bottom: 6px solid #FF79DA;
   animation: rotate 3s infinite;
 }
+.back .spin .outside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  border-bottom: 4px solid #99E2D0;
+  animation: rotate 1s infinite;
+}
 .back .spin .inside {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   animation: rotate 3s infinite;
   border-radius: 100%;
   width: 260px;
@@ -196,14 +206,14 @@ header .arrow {
   top: 24px;
   left: 30px;
 }
-header h1 {
+header .ohmyfood {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
   height: 65px;
 }
-header h1 .logo {
+header .ohmyfood .logo {
   margin-top: 10px;
   width: 165px;
   height: 30px;
