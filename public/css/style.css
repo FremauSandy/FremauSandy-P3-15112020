@@ -191,10 +191,6 @@ hr {
   border-top: 20px solid #FF79DA;
   border-bottom: 20px solid #FF79DA;
 }
-.back .spin .inside .center .favicon {
-  width: 100px;
-  height: 100px;
-}
 
 /* --header-- */
 header {
@@ -234,7 +230,7 @@ header form .icon-map {
 
 /* --Section function-- */
 .function {
-  height: 440px;
+  height: 500px;
   background-color: white;
   width: 100%;
 }
@@ -244,7 +240,6 @@ header form .icon-map {
 @media screen and (max-width: 1160px) {
   .function .title-function {
     margin-left: 20px;
-    width: 80%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -298,7 +293,7 @@ header form .icon-map {
 }
 .function .btn-function .circle, .function .btn-function .icon-function, .function .btn-function .text-area {
   position: relative;
-  right: 35px;
+  right: 45px;
 }
 @media screen and (max-width: 700px) {
   .function .btn-function {
@@ -308,14 +303,9 @@ header form .icon-map {
 
 /* --Section Choice-- */
 .choice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
-  margin: 0 0 60px 0;
-  width: 70%;
+  margin: 0 10% 60px 10%;
 }
 .choice .title-restaurant {
   width: 100%;
@@ -383,9 +373,9 @@ header form .icon-map {
   transform: scale(1.15);
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1020px) {
   .choice {
-    width: 100%;
+    margin: 0 0 60px 0;
   }
 }
 /* --Section menu-- */
@@ -579,6 +569,7 @@ footer .text-footer .bloc-footer {
 body,
 nav,
 header,
+.container,
 section {
   display: flex;
   align-items: center;

@@ -1,6 +1,6 @@
 /* --Section function-- */
 .function{
-    height: 440px;
+    height: 500px;
     background-color: white;
     width: 100%;
     .title-function{
@@ -9,7 +9,6 @@
     @media screen and (max-width: 1160px){
       .title-function{
         margin-left: 20px;
-        width: 80%;
       }
     }
     @media screen and (max-width:400px){
@@ -57,7 +56,7 @@
         }
         .circle,.icon-function,.text-area{
           position: relative;
-          right: 35px;
+          right: 45px;
         }
     }
     @media screen and (max-width: 700px){
