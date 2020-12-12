@@ -17,6 +17,9 @@ $darkengrey: #3A3433;
 @mixin shadow-btn{
   box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
 }
+@mixin shadow-btn-hover{
+  box-shadow: 0px 0px 30px $purple;
+}
 @mixin border{
   border: none;
   border-radius: 20px;
@@ -41,6 +44,22 @@ $darkengrey: #3A3433;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space:nowrap;
+}
+@mixin grey-btn{
+  background-color:$lightgrey;
+  border-style: none;
+  display: flex;
+}
+@mixin btn-purple{
+  border-style: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  width: 220px;
+  height: 50px;
+  background: linear-gradient(175deg, #ea73da, #9356dc);
+  color: white;
+  border-radius: 50px;
+  margin: 30px auto 60px auto;
 }
 /* --Keyframes -- */
 @keyframes load{
