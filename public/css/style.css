@@ -135,17 +135,15 @@ hr {
 }
 
 .back {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
   width: 100%;
   height: 100%;
 }
 .back .spin {
+  position: absolute;
+  top: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,13 +163,13 @@ hr {
   width: 300px;
   height: 300px;
   border-bottom: 4px solid #99E2D0;
-  animation: rotate 1s infinite;
+  animation: rotate 1s;
 }
 .back .spin .inside {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: rotate 3s infinite;
+  animation: rotate 3s;
   border-radius: 100%;
   width: 260px;
   height: 260px;
@@ -183,7 +181,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: rotate 6s infinite;
+  animation: rotate 6s;
   border-radius: 100%;
   width: 200px;
   height: 200px;
@@ -192,6 +190,24 @@ hr {
   border-bottom: 20px solid #FF79DA;
 }
 
+@media screen and (max-width: 460px) {
+  .back .spin {
+    width: 200px;
+    height: 200px;
+  }
+  .back .spin .outside {
+    width: 220px;
+    height: 220px;
+  }
+  .back .spin .outside .inside {
+    width: 180px;
+    height: 180px;
+  }
+  .back .spin .outside .inside .center {
+    width: 120px;
+    height: 120px;
+  }
+}
 /* --header-- */
 header {
   background-color: white;
@@ -232,20 +248,10 @@ header form .icon-map {
 .function {
   height: 500px;
   background-color: white;
-  width: 100%;
 }
 .function .title-function {
   margin-left: 16%;
-}
-@media screen and (max-width: 1160px) {
-  .function .title-function {
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .function .title-function {
-    width: 80%;
-  }
+  width: 80%;
 }
 .function .btn-function {
   background-color: #F6F6F6;
@@ -291,13 +297,18 @@ header form .icon-map {
 .function .btn-function .text-area {
   font-size: 16px;
 }
-.function .btn-function .circle, .function .btn-function .icon-function, .function .btn-function .text-area {
-  position: relative;
-  right: 45px;
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+  .function .title-function {
+    margin-left: 20px;
+  }
   .function .btn-function {
     width: 85%;
+  }
+  .function .circle,
+.function .icon-function,
+.function .text-area {
+    position: relative;
+    right: 10%;
   }
 }
 
@@ -305,7 +316,8 @@ header form .icon-map {
 .choice {
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 0 10% 60px 10%;
+  margin-bottom: 60px;
+  width: 70%;
 }
 .choice .title-restaurant {
   width: 100%;
@@ -339,14 +351,6 @@ header form .icon-map {
   top: 20px;
   left: 70%;
 }
-@media screen and (max-width: 400px) {
-  .choice article .text-new {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-  }
-}
 .choice article .img-restaurant {
   object-fit: cover;
   width: 100%;
@@ -373,9 +377,17 @@ header form .icon-map {
   transform: scale(1.15);
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 900px) {
   .choice {
-    margin: 0 0 60px 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
   }
 }
 /* --Section menu-- */
@@ -578,16 +590,21 @@ section {
   flex-direction: column;
   background-color: #F6F6F6;
   margin: 0%;
+  width: 100%;
+}
+
+.body {
+  max-width: 1440px;
 }
 
 .container {
-  animation: appear 4s ease-in;
+  animation: appear 2s ease-in;
   animation-fill-mode: forwards;
 }
 
 .back {
   opacity: 1;
-  animation: disappear 4s ease-out;
+  animation: disappear 2s ease-out;
   animation-fill-mode: forwards;
 }
 

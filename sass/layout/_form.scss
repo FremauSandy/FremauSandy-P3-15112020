@@ -2,19 +2,9 @@
 .function{
     height: 500px;
     background-color: white;
-    width: 100%;
     .title-function{
       margin-left: 16%;
-    }
-    @media screen and (max-width: 1160px){
-      .title-function{
-        margin-left: 20px;
-      }
-    }
-    @media screen and (max-width:400px){
-      .title-function{
-        width: 80%;
-      }
+      width: 80%;
     }
     .btn-function{
       @include grey-btn;
@@ -44,24 +34,29 @@
         background-color:$purple;
         color: white;
         }
-        .icon-function{
-          color:$icongrey;
-          font-size: 20px;
-        }
-        .fa-mobile-alt{
-          margin-left: 15px;
-        }
-        .text-area{
-          font-size: 16px;
-        }
-        .circle,.icon-function,.text-area{
-          position: relative;
-          right: 45px;
-        }
+      .icon-function{
+        color:$icongrey;
+        font-size: 20px;
+      }
+      .fa-mobile-alt{
+        margin-left: 15px;
+      }
+      .text-area{
+        font-size: 16px;
+      }
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 900px){
+      .title-function{
+        margin-left: 20px;
+      }
       .btn-function{
         width: 85%;
+      }
+      .circle,
+      .icon-function,
+      .text-area{
+        position: relative;
+        right: 10%;
       }
     }
   }

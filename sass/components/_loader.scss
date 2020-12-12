@@ -1,12 +1,10 @@
   .back{
-    position:fixed;
-    top: 0;
-    left: 0;
     @include structure;
-    color: black;
-    width:100%;
+    width: 100%;
     height: 100%;
     .spin {
+      position: absolute;
+      top: 20%;
       @include structure;
       border-radius: 100%;
       width: 280px;
@@ -21,11 +19,11 @@
         width: 300px;
         height: 300px;
         border-bottom: 4px solid $blue;
-        animation: rotate 1s infinite;
+        animation: rotate 1s;
       }
       .inside {
         @include structure;
-        animation: rotate 3s infinite;
+        animation: rotate 3s;
         border-radius: 100%;
         width: 260px;
         height: 260px;
@@ -34,7 +32,7 @@
         border-left: 10px solid $purple;
         .center {
           @include structure;
-          animation: rotate 6s infinite;
+          animation: rotate 6s;
           border-radius: 100%;
           width: 200px;
           height: 200px;
@@ -45,6 +43,25 @@
       }
     }
 }
-
+@media screen and (max-width: 460px){
+  .back{
+    .spin{
+      width: 200px;
+      height: 200px;
+      .outside{
+        width: 220px;
+        height: 220px;
+        .inside{
+          width: 180px;
+          height: 180px;
+          .center{
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
 
   
