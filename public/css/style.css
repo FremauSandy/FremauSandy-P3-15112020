@@ -113,6 +113,29 @@ hr {
   transform: scale(1.3);
 }
 
+.btn-function {
+  background-color: #F6F6F6;
+  border-style: none;
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F6F6F6;
+  font-weight: bold;
+  width: 50%;
+  height: 75px;
+  margin: 10px 20px 10px 30px;
+}
+.btn-function:hover {
+  background-color: #f4edff;
+}
+.btn-function:hover .icon-function {
+  color: #9356DC;
+}
+
 .logo-heart {
   display: flex;
   align-items: center;
@@ -252,28 +275,6 @@ header form .icon-map {
 .function .title-function {
   margin-left: 16%;
   width: 80%;
-}
-.function .btn-function {
-  background-color: #F6F6F6;
-  border-style: none;
-  display: flex;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #F6F6F6;
-  font-weight: bold;
-  width: 50%;
-  height: 75px;
-  margin: 10px 20px 10px 30px;
-}
-.function .btn-function:hover {
-  background-color: #f4edff;
-}
-.function .btn-function:hover .icon-function {
-  color: #9356DC;
 }
 .function .btn-function .circle {
   display: flex;

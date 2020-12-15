@@ -10,3 +10,22 @@
     transform: scale(1.3);
   }
 }
+.btn-function{
+  @include grey-btn;
+  @include shadow-btn;
+  @include border;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  background-color:$lightgrey;
+  font-weight: bold;
+  width: 50%;
+  height: 75px;
+  margin: 10px 20px 10px 30px;
+  &:hover{
+    background-color: $lightpurple;
+    .icon-function{
+      color: $purple;
+    }
+  }
+}
