@@ -1,0 +1,33 @@
+/* --body -- */
+body,
+nav,
+header,
+.container,
+section{
+  @include structure;
+  font-family: "Roboto" ,sans-serif;
+  flex-direction: column;
+  background-color:$lightgrey;
+  margin: 0%;
+  width: 100%;
+}
+.body{
+  max-width: 1440px;
+}
+.container{
+  animation: appear 2s ease-in;
+  animation-fill-mode: forwards;
+} 
+.back{
+  opacity:1;
+  animation: disappear 2s ease-out;
+  animation-fill-mode: forwards;
+}
+
+p{
+  @include ellipsis;
+}
+a{
+  color: black;
+  text-decoration: none;
+}

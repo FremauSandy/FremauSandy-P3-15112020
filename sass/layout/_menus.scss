@@ -31,7 +31,6 @@ figure{
   @media screen and (max-width:400px){
     .title-menu{
       margin-right: 0;
-      margin-left: 5px;
       width: 100%;
     }
     .logo-heart{
@@ -46,6 +45,12 @@ figure{
       align-items: center;
       width: 100%;
       animation: 2s ease-out load;
+    }
+    .plates{
+      animation-delay: 300ms;
+    }
+    .dessert{
+      animation-delay: 500ms;
     }
     h2{
       width: 96%;
@@ -137,7 +142,7 @@ figure{
       label{
         &:hover{
             .check{
-            width: 60%;
+            width: 30%;
             }
         }
       }

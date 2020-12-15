@@ -50,6 +50,48 @@
   font-weight: normal;
   font-style: normal;
 }
+/* --body -- */
+body,
+nav,
+header,
+.container,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  margin: 0%;
+  width: 100%;
+}
+
+.body {
+  max-width: 1440px;
+}
+
+.container {
+  animation: appear 2s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.back {
+  opacity: 1;
+  animation: disappear 2s ease-out;
+  animation-fill-mode: forwards;
+}
+
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 h1 {
   margin: 35px 0 15px 0;
   text-align: center;
@@ -267,6 +309,17 @@ header form .icon-map {
   margin: 0 15px 0 0;
 }
 
+/* --nav-- */
+nav p {
+  width: 100%;
+  font-weight: 300;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
 /* --Section function-- */
 .function {
   height: 500px;
@@ -427,7 +480,6 @@ figure .picture-banner {
 @media screen and (max-width: 400px) {
   .menu .title-menu {
     margin-right: 0;
-    margin-left: 5px;
     width: 100%;
   }
   .menu .logo-heart {
@@ -442,6 +494,12 @@ figure .picture-banner {
   align-items: center;
   width: 100%;
   animation: 2s ease-out load;
+}
+.menu .plates {
+  animation-delay: 300ms;
+}
+.menu .dessert {
+  animation-delay: 500ms;
 }
 .menu h2 {
   width: 96%;
@@ -538,7 +596,7 @@ figure .picture-banner {
     margin: 40px 0 10px 10px;
   }
   .menu label:hover .check {
-    width: 60%;
+    width: 30%;
   }
 }
 /* --Footer-- */
@@ -578,58 +636,6 @@ footer .text-footer .bloc-footer {
     line-height: 25px;
     margin-left: 0;
   }
-}
-/* --body -- */
-body,
-nav,
-header,
-.container,
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  flex-direction: column;
-  background-color: #F6F6F6;
-  margin: 0%;
-  width: 100%;
-}
-
-.body {
-  max-width: 1440px;
-}
-
-.container {
-  animation: appear 2s ease-in;
-  animation-fill-mode: forwards;
-}
-
-.back {
-  opacity: 1;
-  animation: disappear 2s ease-out;
-  animation-fill-mode: forwards;
-}
-
-p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-/* --nav-- */
-nav p {
-  width: 100%;
-  font-weight: 300;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
