@@ -362,7 +362,7 @@ nav p {
 .function .icon-function,
 .function .text-area {
     position: relative;
-    right: 10%;
+    right: 12%;
   }
 }
 
@@ -472,7 +472,7 @@ figure .picture-banner {
   font-family: "Shrikhand";
   font-weight: lighter;
   letter-spacing: 0.5px;
-  margin: 35px 0 0 20px;
+  margin: 35px 0 0 30px;
 }
 .menu .title-menu .logo-heart {
   margin-top: 30px;
@@ -503,7 +503,7 @@ figure .picture-banner {
 }
 .menu h2 {
   width: 96%;
-  margin: 45px 0 0 0;
+  margin: 45px 0 0 15px;
   font-weight: 300;
   animation: 1s ease-out load;
 }
@@ -593,7 +593,10 @@ figure .picture-banner {
   }
   .menu h2 {
     width: 90%;
-    margin: 40px 0 10px 10px;
+    margin: 40px 0 10px 0;
+  }
+  .menu hr {
+    margin-left: 25px;
   }
   .menu label:hover .check {
     width: 30%;
