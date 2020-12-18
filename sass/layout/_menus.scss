@@ -22,7 +22,7 @@ figure{
       font-family: "Shrikhand";
       font-weight: lighter;
       letter-spacing: 0.5px;
-      margin: 35px 0 0 30px;
+      margin: 35px 0 0 20px;
     }
     .logo-heart{
       margin-top: 30px;
@@ -54,7 +54,7 @@ figure{
     }
     h2{
       width: 96%;
-      margin: 45px 0 0 15px ;
+      margin: 45px 0 0 0 ;
       font-weight: 300;
       animation: 1s ease-out load;
     }
@@ -149,5 +149,14 @@ figure{
             }
         }
       }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .big-title{
+      text-align: center;
+      margin-left: 10px;
+    }
+    hr{
+      margin-left: 20px;
     }
   }
